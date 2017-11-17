@@ -16,7 +16,7 @@
 
 ## Instructions
 
-### Part 1 (600 points) - Creating & adding data to a database
+## Part 1 (600 points) - Creating & adding data to a database
 
 We've provided 3 CSV files that should be familiar -- they're the CSV files you should have produced something similar to in your Project 3, when you scraped NPS.gov:
 
