@@ -39,7 +39,7 @@ The remainder of Part 1 and Part 2 should be written in a code file called `SI50
 * **Sites**
 
     * ID (SERIAL)
-    * Name (VARCHAR up to 128 chars)
+    * Name (VARCHAR up to 128 chars, UNIQUE)
     * Type [e.g. "National Lakeshore" or "National Park"] (VARCHAR up to 128 chars)
     * State_ID (INTEGER - FOREIGN KEY REFERENCING States)
     * Location (VARCHAR up to 255 chars)
@@ -48,10 +48,12 @@ The remainder of Part 1 and Part 2 should be written in a code file called `SI50
 * **States**
 
     * ID (SERIAL)
-    * Name (VARCHAR up to 40 chars)
+    * Name (VARCHAR up to 40 chars, UNIQUE)
 
 
 And you should add the data from those `.CSV` files to those database tables as appropriate.
+
+HINT: There should be only 3 rows in the **States** table when you're done inserting data, but a LOT of rows in the **Sites** table!
 
 Examples of code you've seen in class will be very useful here.
 
