@@ -40,6 +40,7 @@ The remainder of Part 1 and Part 2 should be written in a code file called `SI50
 
     * ID (SERIAL)
     * Name (VARCHAR up to 128 chars)
+    * Type [e.g. "National Lakeshore" or "National Park"] (VARCHAR up to 128 chars)
     * State_ID (INTEGER - FOREIGN KEY REFERENCING States)
     * Location (VARCHAR up to 255 chars)
     * Description (TEXT)
@@ -65,6 +66,8 @@ We have provided sample CSV files so everyone is working from the same files.
 * In Python, query the database for all of the **locations** of the sites. (Of course, this data may vary from "Detroit, Michigan" to "Various States: AL, AK, AR, OH, CA, NV, MD" or the like. That's OK!) Save the resulting data in a variable called `all_locations`.
 
 * In Python, query the database for all of the **names** of the sites whose **descriptions** include the word `beautiful`. Save the resulting data in a variable called `beautiful_sites`.
+
+* In Python, query the database for the total number of **sites whose type is `National Lakeshore`.** Save the resulting data in a variable called `natl_lakeshores`.
 
 * In Python, query your database for the **names of all the national sites in Michigan**. Save the resulting data in a variable called `michigan_names`. You should use an inner join query to do this.
 
