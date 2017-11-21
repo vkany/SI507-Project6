@@ -120,26 +120,26 @@ def execute_and_print(query):
         print(r)
     print('--> Result Rows:', len(results))
     print()
+    
+#-------------------
 # Write code to make queries and save data in variables here.
 # * In Python, query the database for all of the **locations** of the sites.
 #(Of course, this data may vary from "Detroit, Michigan" to "Various States:
 #AL, AK, AR, OH, CA, NV, MD" or the like. That's OK!) Save the resulting data in a variable called `all_locations`.
 all_locations = execute_and_print(""" SELECT "location"  FROM sites """ )
-
+#-------------------
 # * In Python, query the database for all of the **names** of the sites whose **descriptions** include the word `beautiful`. Save the resulting data in a variable called `beautiful_sites`.
 beautiful_sites = execute_and_print(""" SELECT "name" FROM "sites" WHERE "description" ilike '%beautiful' """)
-
+#-------------------
 # * In Python, query the database for the total number of **sites whose type is `National Lakeshore`.
 #** Save the resulting data in a variable called `natl_lakeshores`.
 natl_lakeshores = execute_and_print (""" SELECT count(*) FROM "sites" WHERE ("type" = 'National Lakeshore')""")
-
+#--------------------
 # * In Python, query your database for the **names of all the national sites in Michigan
 #**. Save the resulting data in a variable called `michigan_names`. You should use an inner join query to do this.
 michigan_names = execute_and_print(""" SELECT "name" FROM "sites" WHERE ("state_id" = 3)""")
-
+#-------------------
 # * In Python, query your database for the
 #**total number of sites in Arkansas**. Save the resulting data in a variable
 # called `total_number_arkansas`. You can use multiple queries + Python code to do this, one subquery, or one inner join query. HINT: You'll need to use an aggregate function!
 total_number_arkansas = execute_and_print (""" SELECT count(*) FROM "sites" INNER JOIN "states" ON ("sites"."state_id" = "sites"."state_id") """)
-
-# We have not provided any tests, but you could write your own in this file or another file, if you want.
